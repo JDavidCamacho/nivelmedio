@@ -144,20 +144,20 @@ class Formulario extends StatelessWidget {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: primaryNavy,//define el color de fondo
-                            foregroundColor: Colors.white,
-                            padding: EdgeInsets.symmetric(vertical: 16),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
+                            backgroundColor: primaryNaranja,//define el color de fondo
+                            foregroundColor: Colors.white,//se defini el color de las letras
+                            padding: EdgeInsets.symmetric(vertical: 16),//espacio interior para agrandar el boton
+                            shape: RoundedRectangleBorder(//borde redondeado
+                              borderRadius: BorderRadius.circular(8),//eleva el botn
                             ),
                             elevation: 2,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.save, size: 20),
+                              Icon(Icons.save, size: 20),//icono de guardar
                               SizedBox(width: 8),
-                              Text(
+                              Text(//texto del boton
                                 'Registrar',
                                 style: TextStyle(
                                   fontSize: 16,
@@ -168,6 +168,9 @@ class Formulario extends StatelessWidget {
                           ),
                         ),
                       ),
+
+
+                      SizedBox(width: 12),
                     ],
                   ),
                 ],
