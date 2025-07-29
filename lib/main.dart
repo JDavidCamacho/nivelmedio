@@ -29,7 +29,7 @@ class Formulario extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(//es l;a cabesera del formulario
         title: Text('Registro de Clientes',
         style: TextStyle(
           color: Colors.white,
@@ -67,7 +67,7 @@ class Formulario extends StatelessWidget {
                   SizedBox(height: 12),
                     //Definir Titulo despues del icono
                   Text(
-                    'Datos Personales',
+                    'Informacion del Cliente',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class Formulario extends StatelessWidget {
               child: Column(//declarar un hijo de forma verticla
                 crossAxisAlignment: CrossAxisAlignment.stretch,//estira los widgets para que ocupen el ancho disponible
                 children: [
-                  _buildSeccionTitulo('Informacion', Icons.info_outline),
+                  _buildSeccionTitulo('Datos Personales', Icons.info_outline),
 
                   _buildTextField(
                     label: 'Nombre',
@@ -171,6 +171,35 @@ class Formulario extends StatelessWidget {
 
 
                       SizedBox(width: 12),
+
+
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () {},
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: primaryNaranja,//defini el color de la letra
+                            side: BorderSide(color: primaryNegro),//defini el borde del campo
+                            padding: EdgeInsets.symmetric(vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),//crea un borde redondeado en las esquinas del campo
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.clear, size: 20),
+                              SizedBox(width: 8),
+                              Text(
+                                'Limpiar',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],
